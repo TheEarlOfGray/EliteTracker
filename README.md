@@ -115,3 +115,6 @@ As it stands the user can delete existing ships as well as adding new ones, whil
 Thanks and credit go to w3schools for their basic navbar HTML code utilising CSS provided by Bootstrap3.\
 Thanks and credit go to Bootstrap3 for the style elements.\
 Most thanks go to Oliver Nichols, Ryan Wright and Victoria Sacre for teaching and guidance.
+
+Elliot was here...
+
