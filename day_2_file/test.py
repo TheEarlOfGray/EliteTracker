@@ -1,4 +1,6 @@
 import something
+import sys
+
 
 def say_hello() -> str:
     return "Hello, World"
