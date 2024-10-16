@@ -1,7 +1,8 @@
 # EliteTracker
+## Author - Earl Gray
 
 ## Objective
-
+Hello
 * To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training.
@@ -65,3 +66,52 @@ My risk assessment, though basic, attempted to percieve possible threats to the 
 
 ## Front End
 
+The entry point for the app is the home page, navigated to with the '/' url suffix. The landing/home page simply directs the user to navigate the site using the menu options, and occasionally prints a message to confirm addition of Pilots or Ships. The style elements of the navigation bar are courtesy of Bootstrap 3.
+![HomePageLanding](https://user-images.githubusercontent.com/80707106/126904455-50526b24-dd86-452f-9521-76ee0bd9c7ed.png)
+
+And when a Pilot is added for example:
+![HomePageMessage](https://user-images.githubusercontent.com/80707106/126904529-7b645218-021f-498b-be66-a7272a0baa18.png)
+
+From this (and any) page the user can add Pilots, with the form creating an entry for the Pilot that persists in the database on reciept of a valid form submission.
+![AddPilot](https://user-images.githubusercontent.com/80707106/126904776-1ca2e811-b5d4-4290-9f79-74ded58f5464.png)
+
+The functionality for adding a Ship model is exactly the same but there is something of a difference when adding a specific ship, as this table element can only be created with links to both an existing Pilot and an existing Ship type.
+![AddPilotShip](https://user-images.githubusercontent.com/80707106/126904947-a1f4e4fe-7dbc-4a22-a88c-4b3ef5612a04.png)
+
+
+## Testing and Automation
+
+The app consists of several unit tests designed to test each aspect of the apps functionality, namely the routing and use of CRUD functionality.
+The test coverage of these functions is 100% as seen in the image below,
+![TestsCoverage](https://user-images.githubusercontent.com/80707106/126905419-8ea9285a-366a-430c-91bb-bbb32cc4432f.png)
+
+and should any of these tests fail this can be tracked in the terminal.
+![TestsFail](https://user-images.githubusercontent.com/80707106/126905430-949940d2-8495-416c-bd65-953fae184251.png)
+
+As it currently stands the app passes all of the tests to be run. These tests can be found in the test folder in the main directory.
+![TestsPassed](https://user-images.githubusercontent.com/80707106/126905492-76bc62c1-dfac-4387-bcc6-2c0466377517.png)
+
+To achieve a somewhat automated process Jenkins has been installed and can be used to run the tests on the latest build pushed to GitHub. First Jenkins clones the repo and starts a virtual environment,
+![JenkinsSuccess](https://user-images.githubusercontent.com/80707106/126905558-4656da1b-2fec-499a-a1b5-0fe030230183.png)
+
+and then proceeds to install all of the required packages,
+![InstallingRequirements](https://user-images.githubusercontent.com/80707106/126905570-753d1756-7314-4df7-8cf1-bc336feb0624.png)
+
+followed by running the tests, ensuring they all pass and then removing the installation.
+![JenkinsRunsTests](https://user-images.githubusercontent.com/80707106/126905596-7ccc131c-9cf1-429e-8c02-bc59dc80ccb0.png)
+
+Jenkins is currently set to run this automation from any branch of the GitHub repo on the click of a button, however for future development Jenkins would most likely be set to run tests automatically on pushing to the repos 'Main' branch.
+
+## The Future
+
+The app is suitable for continued development, most notably allowing for the editing of the individual player characters ships, which was outside of the scope of this project. Nonetheless, work has been done in the routes to ensure this further development is easily implemented.\
+![RoutingFuture](https://user-images.githubusercontent.com/80707106/126906242-987e156a-f7e9-45d1-8443-51c8d6b56471.png)
+
+As it stands the user can delete existing ships as well as adding new ones, whilst they are able to update only the player character and ship types as these are the more likely to change through time.
+
+
+## Acknowledgements
+
+Thanks and credit go to w3schools for their basic navbar HTML code utilising CSS provided by Bootstrap3.\
+Thanks and credit go to Bootstrap3 for the style elements.\
+Most thanks go to Oliver Nichols, Ryan Wright and Victoria Sacre for teaching and guidance.
